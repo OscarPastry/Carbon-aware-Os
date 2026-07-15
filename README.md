@@ -1,10 +1,10 @@
-# 🌿 OS_project — Carbon-Aware Green Task Scheduler
+# Carbon-Aware Green Task Scheduler
 
 A **carbon-aware task scheduler** that delays non-urgent computational tasks when grid electricity carbon intensity is high, and runs them when it's low — reducing the carbon footprint of computation.
 
 Originally written in C, the project has been fully rewritten using a modern **Rust (Axum/Tokio)** backend with **Python** tooling for visualization and simulation.
 
-## 🏗️ Architecture
+## Architecture
 
 1. **Scheduler Daemon (Rust):** An asynchronous daemon that exposes a REST API (`POST /add_tasks`). It controls OS-level task execution duration via polling carbon API metrics.
 2. **Carbon API Mock (Python):** A local Flask server that simulates changing grid intensity ("low", "moderate", "high", "very high") every 2 minutes.
@@ -13,7 +13,7 @@ Originally written in C, the project has been fully rewritten using a modern **R
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 ### Prerequisites
 - [Rust & Cargo](https://rustup.rs/) (Edition 2021)
